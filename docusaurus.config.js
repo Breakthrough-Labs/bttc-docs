@@ -26,7 +26,9 @@ const config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
-
+  plugins: [
+    "@cookbookdev/docusaurus-jsx-runtime-fallback-plugin"
+  ],
   presets: [
     [
       'classic',
@@ -67,168 +69,202 @@ const config = {
           target: "_self",
         },
         items: [
-         {
+          {
             label: "Apps",
             position: "right",
             items: [
-                  {
-                    href: 'https://bt.io/wallet?language=EN',
-                    label: 'Wallet',
-                    target: '_blank',
-                    rel: null,
-                  },
-                  {
-                    href: 'https://bt.io/bridge?language=EN',
-                    label: 'Bridge',
-                    target: '_blank',
-                    rel: null,
-                  },
-		  {
-                    href: 'https://bt.io/staking?language=EN',
-                    label: 'Staking',
-                    target: '_blank',
-                    rel: null,
-                  },
-		  {
-                    href: 'https://bt.io/bttcswap?language=EN',
-                    label: 'Swap',
-                    target: '_blank',
-                    rel: null,
-                  },
-		  {
-                    href: 'https://bttcscan.com/',
-                    label: 'Explorer',
-                    target: '_blank',
-                    rel: null,
-                  },
-		  {
-                    href: 'https://scan.bt.io',
-                    label: 'BTTCSCAN',
-                    target: '_blank',
-                    rel: null,
-                  },
-		  {
-                    href: 'https://bt.io/swap?language=EN',
-                    label: 'BTT Redenomination',
-                    target: '_blank',
-                    rel: null,
-                  },
+              {
+                href: 'https://bt.io/wallet?language=EN',
+                label: 'Wallet',
+                target: '_blank',
+                rel: null,
+              },
+              {
+                href: 'https://bt.io/bridge?language=EN',
+                label: 'Bridge',
+                target: '_blank',
+                rel: null,
+              },
+              {
+                href: 'https://bt.io/staking?language=EN',
+                label: 'Staking',
+                target: '_blank',
+                rel: null,
+              },
+              {
+                href: 'https://bt.io/bttcswap?language=EN',
+                label: 'Swap',
+                target: '_blank',
+                rel: null,
+              },
+              {
+                href: 'https://bttcscan.com/',
+                label: 'Explorer',
+                target: '_blank',
+                rel: null,
+              },
+              {
+                href: 'https://scan.bt.io',
+                label: 'BTTCSCAN',
+                target: '_blank',
+                rel: null,
+              },
+              {
+                href: 'https://bt.io/swap?language=EN',
+                label: 'BTT Redenomination',
+                target: '_blank',
+                rel: null,
+              },
 
-		],
-	  },
+            ],
+          },
           {
-		  label: "Community",
-		  position: "right",
-		  items: [
-			  {
-			    href: 'https://discord.com/invite/qrxfbgQYGa',
-			    label: 'Discord',
-			    target: '_blank',
-			    rel: null,
-			  },
-                          {
-                            href: 'https://forum.bt.io',
-                            label: 'Forum',
-                            target: '_blank',
-                            rel: null,
-                          },
-			  {
-			    href: 'https://twitter.com/BitTorrent',
-			    label: 'Twitter',
-			    target: '_blank',
-			    rel: null,
-			  },
-			  {
-			    href: 'https://t.me/bttccoredev',
-			    label: 'Telegram',
-			    target: '_blank',
-			    rel: null,
-			  },
-			  {
-			    href: 'https://medium.com/@BitTorrent',
-			    label: 'Medium',
-			    target: '_blank',
-			    rel: null,
-			  },
+            label: "Community",
+            position: "right",
+            items: [
+              {
+                href: 'https://discord.com/invite/qrxfbgQYGa',
+                label: 'Discord',
+                target: '_blank',
+                rel: null,
+              },
+              {
+                href: 'https://forum.bt.io',
+                label: 'Forum',
+                target: '_blank',
+                rel: null,
+              },
+              {
+                href: 'https://twitter.com/BitTorrent',
+                label: 'Twitter',
+                target: '_blank',
+                rel: null,
+              },
+              {
+                href: 'https://t.me/bttccoredev',
+                label: 'Telegram',
+                target: '_blank',
+                rel: null,
+              },
+              {
+                href: 'https://medium.com/@BitTorrent',
+                label: 'Medium',
+                target: '_blank',
+                rel: null,
+              },
 
-		  ],
-	  },
+            ],
+          },
           {
-		  label: "Security Audit",
-		  position: "right",
-		  items: [
-			  {
-			    href: 'https://official.bt.io/doc/SlowMist%20Audit%20Report%20-%20BitTorrent%20-%20TRON.pdf',
-			    label: 'Bittorrent TRON',
-			    target: '_blank',
-			    rel: null,
-			  },
-			  {
-			    href: 'https://official.bt.io/doc/SlowMist%20Audit%20Report%20-%20BitTorrent%20-%20Ethereum.pdf',
-			    label: 'Bittorrent Ethereum',
-			    target: '_blank',
-			    rel: null,
-			  },
+            label: "Security Audit",
+            position: "right",
+            items: [
+              {
+                href: 'https://official.bt.io/doc/SlowMist%20Audit%20Report%20-%20BitTorrent%20-%20TRON.pdf',
+                label: 'Bittorrent TRON',
+                target: '_blank',
+                rel: null,
+              },
+              {
+                href: 'https://official.bt.io/doc/SlowMist%20Audit%20Report%20-%20BitTorrent%20-%20Ethereum.pdf',
+                label: 'Bittorrent Ethereum',
+                target: '_blank',
+                rel: null,
+              },
 
-		  ],
-	  },
-
-	  {
-                  label: "FAQ",
-                  position: "right",
-                  items: [
-                          {
-                            to: 'docs/faq/general-faq',
-                            label: 'General FAQ',
-                            target: '_blank',
-                            rel: null,
-                          },
-                          {
-                            to: 'docs/faq/technical-faq',
-                            label: 'Technical FAQ',
-                            target: '_blank',
-                            rel: null,
-                          },
-			  {
-                            to: 'docs/faq/delegate-faq',
-                            label: 'Delegator FAQ',
-                            target: '_blank',
-                            rel: null,
-                          },
-			  {
-                            to: 'docs/faq/validator-faq',
-                            label: 'Validator FAQ',
-                            target: '_blank',
-                            rel: null,
-                          },
-			  {
-                            to: 'docs/faq/staking-faq',
-                            label: 'Staking FAQ',
-                            target: '_blank',
-                            rel: null,
-                          },
-
-                  ],
-          },
-	  {
-             to: "docs/contribute/guidelines",
-             label: "How to Contribute",
-             position: "right",
-             //activeBasePath: "docs/contribute",
-          },
-	  
-	  {
-	     href: "https://github.com/bttcprotocol",
-	     position: "right",
-             className: "header-github-link",
-             "aria-label": "GitHub repository",
+            ],
           },
 
-	  {
-             type: 'localeDropdown',
-             position: 'right',
+          {
+            label: "FAQ",
+            position: "right",
+            items: [
+              {
+                to: 'docs/faq/general-faq',
+                label: 'General FAQ',
+                target: '_blank',
+                rel: null,
+              },
+              {
+                to: 'docs/faq/technical-faq',
+                label: 'Technical FAQ',
+                target: '_blank',
+                rel: null,
+              },
+              {
+                to: 'docs/faq/delegate-faq',
+                label: 'Delegator FAQ',
+                target: '_blank',
+                rel: null,
+              },
+              {
+                to: 'docs/faq/validator-faq',
+                label: 'Validator FAQ',
+                target: '_blank',
+                rel: null,
+              },
+              {
+                to: 'docs/faq/staking-faq',
+                label: 'Staking FAQ',
+                target: '_blank',
+                rel: null,
+              },
+
+            ],
+          },
+          {
+            to: "docs/contribute/guidelines",
+            label: "How to Contribute",
+            position: "right",
+            //activeBasePath: "docs/contribute",
+          },
+
+          {
+            href: "https://github.com/bttcprotocol",
+            position: "right",
+            className: "header-github-link",
+            "aria-label": "GitHub repository",
+          },
+
+          {
+            type: 'localeDropdown',
+            position: 'right',
           },
         ],
+      },
+      cookbookDocsBot: {
+        features: {
+          enableExplainSnippet: true,
+        },
+        dataSources: [
+          {
+            name: "Bittorrent",
+          },
+        ],
+        greetingMessage:
+          "Hi! I'm ChefGPT, ask me anything about Bittorrent Chain!",
+        explainPromptTemplate: "Could you please elaborate on the content within the specified section? The section I'm referring to is:\n```\n$1\n```\n\nI'm seeking a comprehensive explanation to better understand the nuances, procedures, or concepts outlined in this particular segment. Your clarification will greatly assist in grasping the intricacies of the topic at hand.",
+        dialogTitle: "ChefGPT",
+        suggestions: [
+          "What's Bittorrent Chain?",
+          "How are Tron and Bittorrent Chain different?",
+          "How do I deploy to Bittorrent Chain?",
+        ],
+        messageInputPlaceholder:
+          "Ask anything about Bittorrent Chain",
+        ui: {
+          modalContainer: {
+            width: "1000px",
+            height: "800px",
+            shadow: "inset 1px 1px 0 0 #2c2e40, 0 3px 8px 0 #000309",
+            background: "var(--ifm-background-surface-color)",
+          },
+        },
+        apiBaseUrl: "https://simple-web3-api.herokuapp.com",
+        avatars: {
+          ChefGPT: "/img/bittorrent-logo.png",
+          User: "https://cookbook.dev/img/Richard.png",
+        },
       },
       algolia: {
         indexName: "bttc_developer",
@@ -248,29 +284,29 @@ const config = {
                 label: 'Wallet',
                 to: 'https://bt.io/wallet?language=EN',
               },
-	      {
+              {
                 label: 'Bridge',
                 to: 'https://bt.io/bridge?language=EN',
               },
-	      {
+              {
                 label: 'Staking',
                 to: 'https://bt.io/staking?language=EN',
               },
-	      {
+              {
                 label: 'Swap',
                 to: 'https://bt.io/bttcswap?language=EN',
               },
-	      {
+              {
                 label: 'Explorer',
                 to: 'https://bttcscan.com/',
               },
-	      {
+              {
                 label: 'BTTCSCAN',
                 to: 'https://scan.bt.io',
               },
-               {
+              {
                 label: 'BTT Redenomination',
-     		to: 'https://bt.io/swap?language=EN',
+                to: 'https://bt.io/swap?language=EN',
               },
 
 
@@ -298,7 +334,7 @@ const config = {
             items: [
               {
                 label: 'Discord',
-		href: 'https://discord.com/invite/qrxfbgQYGa',
+                href: 'https://discord.com/invite/qrxfbgQYGa',
               },
               {
                 label: 'Forum',
@@ -306,11 +342,11 @@ const config = {
               },
               {
                 label: 'Twitter',
-		href: 'https://twitter.com/BitTorrent',
+                href: 'https://twitter.com/BitTorrent',
               },
               {
                 label: 'Telegram',
-		href: 'https://t.me/bttccoredev',
+                href: 'https://t.me/bttccoredev',
               },
               {
                 label: 'Meidum',

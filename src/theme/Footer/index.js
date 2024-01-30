@@ -12,6 +12,8 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
+import ChefGPT from "@cookbookdev/docusaurus-chefgpt/theme/SearchBar";
+
 
 function FooterLink({to, href, label, ...props}) {
   const toUrl = useBaseUrl(to);
@@ -109,6 +111,7 @@ function Footer() {
           </div>
         )}
       </div>
+      <ChefGPT />
     </footer>
   );
 }
