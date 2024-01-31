@@ -14,7 +14,7 @@
     "write-heading-ids": "docusaurus write-heading-ids"
   },
   "dependencies": {
-    "@cookbookdev/docusaurus-chefgpt": "^1.0.9",
+    "@cookbookdev/docusaurus-chefgpt": "^1.0.10",
     "@cookbookdev/docusaurus-jsx-runtime-fallback-plugin": "^1.0.1",
     "@docusaurus/core": "2.0.1",
     "@docusaurus/preset-classic": "2.0.1",
