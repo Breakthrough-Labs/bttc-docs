@@ -266,6 +266,8 @@ const config = {
           ChefGPT: "/img/bittorrent-logo.png",
           User: "https://cookbook.dev/img/Richard.png",
         },
+        // It's a public API key, so it's safe to commit it.
+        apiKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWMxOGYwZTA1MjA1MDZmZmEwMDhjNDkiLCJpYXQiOjE3MDcxODM4ODYsImV4cCI6MjAyMjc1OTg4Nn0.vM0hNriY7Cqkugtg0kZOe_GA-vaDnHDLiSTuKAe109c",
       },
       algolia: {
         indexName: "bttc_developer",
